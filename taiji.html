@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<head>
+    <title>太极图</title>
+</head>
+
+<body onload="draw()">
+
+<div align="center">
+    <span>道</span>
+    <span>
+            <canvas id="myCanvus" width="204px" height="204px" style="border:1px dashed black;">
+        出现文字表示你的浏览器不支持HTML5
+    </canvas>
+    </span>
+    <span>生</span>
+</div>
+
+</body>
+</html>
+<script type="text/javascript">
+    <!--
+    function draw() {
+        var canvas = document.getElementById("myCanvus");
+        var context = canvas.getContext("2d");
+
+        context.fillStyle = "#336699";
+        context.fillRect(0, 0, 204, 204);
+        context.translate(102, 102);
+        //context.rotate(Math.PI/6);
+
+        var r = 100;// 半径
+
+        context.beginPath();
+        context.arc(0, 0, r, 0, getRad(360), false);
+        context.fillStyle = "white";
+        context.closePath();
+        context.fill();
+
+        context.beginPath();
+        context.arc(0, 0, r, getRad(90), getRad(270), false);
+        context.fillStyle = "black";
+        context.closePath();
+        context.fill();
+
+        context.beginPath();
+        context.arc(0, 0, r, getRad(270), getRad(90), false);
+        context.fillStyle = "white";
+        context.closePath();
+        context.fill();
+
+        context.beginPath();
+        context.arc(0, -r / 2, r / 2, getRad(90), getRad(270), false);
+        context.fillStyle = "white";
+        context.closePath();
+        context.fill();
+
+        context.beginPath();
+        context.arc(0, r / 2, r / 2, getRad(270), getRad(90), false);
+        context.fillStyle = "black";
+        context.closePath();
+        context.fill();
+
+        context.beginPath();
+        context.arc(0, -r / 2, r / 8, getRad(0), getRad(360), false);
+        context.fillStyle = "black";
+        context.closePath();
+        context.fill();
+
+        context.beginPath();
+        context.arc(0, r / 2, r / 8, getRad(0), getRad(360), false);
+        context.fillStyle = "white";
+        context.closePath();
+        context.fill();
+    }
+
+    function getRad(degree) {
+        return degree / 180 * Math.PI;
+    }
+
+    //-->
+</script>
